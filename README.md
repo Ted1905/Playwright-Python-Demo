@@ -4,21 +4,27 @@
 ![Playwright](https://img.shields.io/badge/Playwright-Automation-green?style=for-the-badge&logo=playwright&logoColor=white)
 
 ## 📌 Project Overview
-This repository demonstrates a **test automation script** designed using **Python** and **Playwright**.
-The project focuses on modern web automation techniques, ensuring reliability and speed in UI testing.
+This repository contains a **comprehensive test automation suite** designed using **Python** and **Playwright**.
+The project validates both **Positive (Happy Path)** and **Negative (Error Handling)** scenarios on the [SauceDemo](https://www.saucedemo.com/) e-commerce platform.
 
-The target application for this demo is [SauceDemo](https://www.saucedemo.com/), a standard e-commerce practice site.
+## 🧪 Test Scenarios Covered
+The script (`main.py`) executes the following test cases:
+
+| ID | Scenario Type | Description | Expected Result |
+| :--- | :--- | :--- | :--- |
+| **TC01** | 🔴 Negative Testing | Login with invalid credentials | System displays error message |
+| **TC02** | 🟢 Positive Testing | Login with valid credentials | User redirected to Inventory page |
 
 ## 🚀 Key Features
-* **Browser Automation:** Uses Playwright's Sync API for fast and reliable execution.
+* **Dual Scenario Execution:** Runs both success and failure paths in a single execution.
+* **Error Validation:** Dynamically checks if the correct error message ("Epic sadface...") is displayed.
 * **Robust Selectors:** Implements stable CSS selectors for maintainability.
-* **Assertions:** Validates successful login via URL verification.
-* **Error Handling:** Includes `try-except` blocks and automatic screenshot capture on failure (`login_error.png`).
-* **Clean Code:** Follows PEP-8 naming conventions and includes detailed docstrings.
+* **Auto-Screenshots:** Captures screenshots automatically if a test fails.
+* **Clean Code:** Follows PEP-8 naming conventions with detailed docstrings.
 
 ## 🛠️ Technology Stack
 * **Language:** Python 3.x
-* **Library:** Playwright
+* **Library:** Playwright (Sync API)
 * **Browser Engine:** Chromium
 
 ## ⚙️ How to Run
@@ -31,12 +37,12 @@ The target application for this demo is [SauceDemo](https://www.saucedemo.com/),
     pip install playwright
     playwright install
     ```
-3.  **Run the test:**
+3.  **Run the test suite:**
     ```bash
     python main.py
     ```
 
-## 🔜 Future Improvements
+## soon Future Improvements
 * Implement **Page Object Model (POM)** design pattern.
-* Integrate **Pytest** for advanced reporting.
-* Add **CI/CD** pipeline (GitHub Actions) for automated testing.
+* Migrate to **Pytest** framework for HTML reporting.
+* Add **CI/CD** pipeline (GitHub Actions).
